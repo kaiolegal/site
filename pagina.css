@@ -1,5 +1,10 @@
+@font-face {
+    font-family: 'Minecrafter';
+    src: url('fonts/Minecrafter.Reg.ttf') format('truetype');
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Minecrafter', Arial, sans-serif;
     background-image: url('background.jpg');
     background-size: cover;
     background-position: center;
@@ -79,13 +84,13 @@ h2 {
     padding-bottom: 10px;
 }
 
-.projects {
+.projects, .images, .contact-info {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
 }
 
-.project {
+.project, .image, .contact-info {
     width: 45%;
     margin: 20px 0;
     padding: 20px;
@@ -95,42 +100,20 @@ h2 {
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.project:hover {
+.project:hover, .image:hover, .contact-info:hover {
     transform: translateY(-5px);
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
-.project h3 {
+.project h3, .image h3 {
     margin: 0;
     font-size: 1.5em;
     color: #555;
 }
 
-.project p {
+.project p, .image p, .contact-info p {
     margin: 5px 0;
     color: #777;
-}
-
-.images {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.image {
-    width: 45%;
-    margin: 20px 0;
-    padding: 20px;
-    background-color: #f0f0f0;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.image:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 .image img {
@@ -138,9 +121,15 @@ h2 {
     border-radius: 10px;
 }
 
+.contact-info p {
+    margin: 5px 0;
+    font-size: 1em;
+    color: #555;
+}
+
 /* Responsividade */
 @media (max-width: 768px) {
-    .project, .image {
+    .project, .image, .contact-info {
         width: 100%;
     }
 
